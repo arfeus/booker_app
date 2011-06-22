@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  salesrep: MyString
+  customer: MyString
+  saleagreed: false
+
+two:
+  salesrep: MyString
+  customer: MyString
+  saleagreed: false

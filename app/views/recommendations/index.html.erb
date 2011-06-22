@@ -1,0 +1,30 @@
+<h1>Lista suosituksista</h1>
+
+<table>
+  <tr>
+    <th>Edustaja</th>
+    <th>Asiakas</th>
+    <th>Kauppa tehty?</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recommendations.each do |recommendation| %>
+<% if recommendation.saleagreed %>
+	<% tulos = "YES!" else tulos = "Ei ole onnistanut (:" %>
+<% end %>
+  <tr>
+    <td><%= recommendation.salesrep %></td>
+    <td><%= recommendation.customer %></td>
+    <td><%= tulos %></td>
+    <td><%= link_to 'Show', recommendation %></td>
+    <td><%= link_to 'Edit', edit_recommendation_path(recommendation) %></td>
+    <td><%= link_to 'Destroy', recommendation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recommendation', new_recommendation_path %>
